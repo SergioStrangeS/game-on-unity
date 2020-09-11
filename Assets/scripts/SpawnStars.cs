@@ -3,7 +3,7 @@ using System.Collections;
 
 public class SpawnStars : MonoBehaviour
 {
-    private GameObject Star;
+    public GameObject Star;
     private Camera cam;
 
     void Start()
