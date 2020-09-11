@@ -6,11 +6,11 @@ using UnityEngine;
 public class buttons : MonoBehaviour
 {
     void OnMouseDown () {
-        transform.localScale = new Vector3 (0.55f, 0.55f, 0.55f);
+        transform.localScale = new Vector3 (1.2f, 1.2f, 1.2f);
     }
 
     void OnMouseUp ()
     {
-        transform.localScale = new Vector3 (0.5f, 0.5f, 0.5f);
+        transform.localScale = new Vector3 (1.0f, 1.0f, 1.0f);
     }
 }

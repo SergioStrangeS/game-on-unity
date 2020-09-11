@@ -15,7 +15,7 @@ public class TextFade : MonoBehaviour
 
     void Update()
     {
-        txt.color = new Color (txt.color.r, txt.color.g, txt.color.b, Mathf.PingPong(Time.time / 2.5f, 1.0f));
+        txt.color = new Color (txt.color.r, txt.color.g, txt.color.b, Mathf.PingPong(Time.time / 1.5f, 1.5f));
         oLine.effectColor = new Color (oLine.effectColor.r, oLine.effectColor.g, oLine.effectColor.b, txt.color.a);
     }
 }
