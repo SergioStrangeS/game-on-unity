@@ -12,6 +12,29 @@ public class DetectClicks : MonoBehaviour
 
     private bool clicked;
 
+    private bool unblockCode = true; //Разблокируй, кок только появится анимация.
+
+    private void CheckObjects()
+    {
+        if (!playText || !gameName)
+        {
+            Debug.Log("Не найден объект playText or gameName");
+        }
+
+        if (!buttons || !m_cube)
+        {
+            Debug.Log("Не найден объект buttons or m_cube");
+        }
+        if (!dirLight || !dirLight_2)
+        {
+            Debug.Log("Не найден объект dirLight or dirLight_2");
+        }
+        if (!cubes_anim || !block)
+        {
+            Debug.Log("Не найден объект cubes_anim or CubeToBlock");
+        }
+    }
+
     void Update()
     {
         if (clicked && dirLight.intensity != 0f)
@@ -22,22 +45,25 @@ public class DetectClicks : MonoBehaviour
 
     void OnMouseDown()
     {
-        if (!clicked)
+        CheckObjects();
+
+        if (!clicked && unblockCode !=false)
         {
-            StartCoroutine(delCubes());
+            StartCoroutine(deleteCubes());
             clicked = true; // Works only ones
-            playText.gameObject.SetActive(false);
             gameName.text = "0";
+            playText.gameObject.SetActive(false);
             buttons.GetComponent<scrollObjects>().speed = -5f;
             buttons.GetComponent<scrollObjects>().checkPos = -100f;
             m_cube.GetComponent<Animation>().Play("StartGameCube");
-            StartCoroutine(cubeToBlock());
             m_cube.transform.localScale = new Vector3(1f, 1f, 1f);
+
+            StartCoroutine(cubeToBlock());
             cubes_anim.Play();
         }
     }
 
-    IEnumerator delCubes()
+    IEnumerator deleteCubes()
     {
         for (int i = 0; i < 3; i++)
         {
@@ -48,7 +74,7 @@ public class DetectClicks : MonoBehaviour
 
     IEnumerator cubeToBlock()
     {
-        yield return new WaitForSeconds(m_cube.GetComponent<Animation>().clip.length + 0.3f);
+        yield return new WaitForSeconds(m_cube.GetComponent<Animation>().GetClip("StartGameCube").length + 0.5f);
         block.Play();
     }
 }
