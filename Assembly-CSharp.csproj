@@ -71,12 +71,12 @@
      <Compile Include="Assets\Colr\DemoScenes\Standard Assets\Effects\ImageEffects\Scripts\PostEffectsHelper.cs" />
      <Compile Include="Assets\Colr\DemoScenes\Standard Assets\Effects\ImageEffects\Scripts\ImageEffects.cs" />
      <Compile Include="Assets\Colr\DemoScenes\Common\Scripts\CameraMouseOrbit.cs" />
+     <Compile Include="Assets\scripts\Game\SpawnBlocks.cs" />
      <Compile Include="Assets\scripts\MainScene\StarAnimation.cs" />
      <Compile Include="Assets\scripts\MainScene\SpawnStars.cs" />
      <Compile Include="Assets\Colr\DemoScenes\Standard Assets\Effects\ImageEffects\Scripts\PostEffectsBase.cs" />
-     <Compile Include="Assets\scripts\MainScene\scrollObjects.cs" />
      <Compile Include="Assets\scripts\MainScene\FallCube.cs" />
-     <Compile Include="Assets\scripts\Game\SpawnBlocks.cs" />
+     <Compile Include="Assets\scripts\MainScene\scrollObjects.cs" />
      <None Include="Assets\Colr\DemoScenes\Standard Assets\Effects\ImageEffects\Shaders\GlobalFog.shader" />
      <None Include="Assets\Colr\Shaders\ScreenColorTransition.shader" />
      <None Include="Assets\Colr\DemoScenes\Standard Assets\Effects\ImageEffects\Shaders\VignettingShader.shader" />
