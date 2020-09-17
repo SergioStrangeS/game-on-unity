@@ -4,7 +4,7 @@ using System.Collections;
 public class StarAnimation : MonoBehaviour
 {
     private SpriteRenderer Star;
-    private float _movementSpeed = 0.1f;
+    private float _movementSpeed = 0.1f; // Скорость перемещения звезд
 
     void Start()
     {

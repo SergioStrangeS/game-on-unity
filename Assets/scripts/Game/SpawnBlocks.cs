@@ -7,7 +7,7 @@ public class SpawnBlocks : MonoBehaviour
     public GameObject block;
     private GameObject blockInst;
     private Vector3 blockPos;
-    private float speed = 2;
+    private float speed = 4;
 
     private void CheckObject()
     {
@@ -20,7 +20,7 @@ public class SpawnBlocks : MonoBehaviour
     {
         CheckObject();
 
-        blockPos = new Vector3 (Random.Range (0.7f, 1.7f), Random.Range(-3.2f, 1f), 0f);
+        blockPos = new Vector3 (Random.Range (0.9f, 1.7f), Random.Range(-3.2f, 1f), -1.4f);
         blockInst = Instantiate(block, new Vector3(5f, -6f, 0f), Quaternion.identity) as GameObject;
     }
 
